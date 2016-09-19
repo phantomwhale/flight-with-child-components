@@ -1,5 +1,5 @@
 {
-  "name": "flight-with-child-components",
+  "name": "@99designs/flight-with-child-components",
   "description": "A Flight mixin for nesting Flight components.",
   "main": "dist/flight-with-child-components.js",
   "files": [
@@ -10,6 +10,8 @@
     "lint": "eslint config src",
     "lint:fix": "eslint --fix config src",
     "prepublish": "npm run build",
+    "preversion": "if [ `git rev-parse HEAD` != `git rev-parse origin/master` ]; then echo Not on master; exit 1; fi",
+    "postversion": "git push && git push --tags",
     "specs": "NODE_ENV=test karma start config/karma.config.js",
     "specs:watch": "npm run specs -- --no-single-run",
     "test": "npm run specs && npm run lint",
@@ -46,12 +48,9 @@
     "semantic-release": "^4.3.5",
     "webpack": "^1.12.1"
   },
-  "peerDependencies": {
-    "flightjs": "^1.5.1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/flightjs/flight-with-child-components.git"
+    "url": "https://github.com/99designs/flight-with-child-components.git"
   },
   "keywords": [
     "flight",
@@ -66,7 +65,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/flightjs/flight-with-child-components/issues"
+    "url": "https://github.com/99designs/flight-with-child-components/issues"
   },
-  "homepage": "https://github.com/flightjs/flight-with-child-components"
+  "homepage": "https://github.com/99designs/flight-with-child-components"
 }
