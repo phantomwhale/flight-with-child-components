@@ -1,7 +1,7 @@
 {
   "name": "@99designs/flight-with-child-components",
   "description": "A Flight mixin for nesting Flight components.",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "main": "dist/flight-with-child-components.js",
   "files": [
     "dist"
