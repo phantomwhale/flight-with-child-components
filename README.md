@@ -6,7 +6,7 @@ A [Flight](https://github.com/flightjs/flight) mixin for nesting components by c
 
 A component that intends to initialize child components should mix in `withChildComponents` and attach the children using `this.attachChild`.
 
-The child will be passed an even to listen out for – when it's triggered, the child will teardown. `withChildComponents` mixin adds a unique event name to the parent (`this.childTeardownEvent`) for this use, but you can manually specify a `teardownOn` event name in the child's attrs.
+The child will be passed an event to listen out for – when it's triggered, the child will teardown. `withChildComponents` mixin adds a unique event name to the parent (`this.childTeardownEvent`) for this use, but you can manually specify a `teardownOn` event name in the child's attrs.
 
 This construct supports trees of components because, if the child also mixes in `withChildComponents`, it's `childTeardownEvent` will be fired before it is torn down, and that will teardown any further children in a cascade.
 
